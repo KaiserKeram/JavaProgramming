@@ -27,8 +27,8 @@ public class Rectangle extends Shape{
         this.width = width;
     }
 
-    public Rectangle(String name, double length, double width) {
-        super(name);
+    public Rectangle(double length, double width) {
+        super("Rectangle");
         setLength(length);
         setWidth(width);
     }
@@ -38,6 +38,15 @@ public class Rectangle extends Shape{
     }
 
     public double perimeter(){
-        return 2 * (length *+ width);
+        return 2 * (length + width);
+    }
+
+    public String toString() {
+        return "Rectangle{" +
+                "length=" + length +
+                ", width=" + width +
+                ", area='" + area() + '\'' +
+                ", perimeter='" + perimeter() + '\'' +
+                '}';
     }
 }
